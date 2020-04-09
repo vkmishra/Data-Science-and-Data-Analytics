@@ -1,1 +1,209 @@
 
+Abstract— Brain tumor segmentation is one of the critical tasks in the medical image processing. Some early diagnosis of brain tumor helps in improving the treatment and also increases the survival rate of the patients. The manual segmentation for cancer diagnosis of brain tumor and generation of MRI images in clinical routine is difficult and time-consuming. The aim of this research paper is to review of MRI based brain tumor segmentation methods for the treatment of cancer like diseases. The magnetic resonance imaging used for detection of tumor and diagnosis of tissue abnormalities. The computerized medical image segmentation helps the doctors in treatment in a simple way with fast decision making. The brain tumor segmentation assessed by computer-based surgery, tumor growth, developing tumor growth models and treatment responses. This research focuses on the causes of brain tumor, brain tumor segmentation and its classification, MRI scanning process and different segmentation methodologies. The Brain Tumor is affecting many people worldwide. It is not only limited with the old age people but also detected in the early age . Brain Tumor is the abnormal growth of cell inside the brain cranium which limits the functioning of the brain. Early detection of the brain tumor is possible with the advancement of machine learning (ML) and image processing (IP). In this paper stages of image processing are discussed and overview of the analogous papers are quoted by analyzing several research papers. This paper provides gist of technologies which can be used to predict brain tumor.
+
+For full assistance of radiologists and better analysis of magnetic resonance imaging (MRI), multi-grade classification of brain tumor is an essential procedure. In this paper, we propose a novel convolutional neural network (CNN) based multi-grade brain tumor classification system. Firstly, tumor regions from an MR image are segmented using a deep learning technique. Secondly, extensive data augmentation is employed to effectively train the proposed system, avoiding the lack of data problem when dealing with MRI for multi-grade brain tumor classification. Finally, a pre-trained CNN model is fine-tuned using augmented data for brain tumor grade classification. The proposed system is experimentally evaluated on both augmented and original data and results show its convincing performance compared to existing methods.
+
+Keywords - Brain Tumor, Segmentation methods, MRI, Deep Learning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+
+A brain tumor occurs when abnormal cells form within the brain. There are two main types of tumors: cancerous (malignant) tumors and benign tumors. Cancerous tumors can be divided into primary tumors, which start within the brain, and secondary tumors, which have spread from elsewhere, known as brain metastasis tumors. All types of brain tumors may produce symptoms that vary depending on the part of the brain involved. These symptoms may include headaches, seizures, problems with vision, vomiting and mental changes. The headache is classically worse in the morning and goes away with vomiting. Other symptoms may include difficulty walking, speaking or with sensations. As the disease progresses, unconsciousness may occur.
+Brain tumor develops because of unusual cell growth within the brain. Brain Tumor generally classified into two types benign and malignant tumors. Malignant Tumors are fast growing cancerous tissues. Benign are slow growing, stagnant cancerous tumor. Most of the tumors are life threatening, brain tumor being one among them. Primary brain tumors originates in the brain. In the Secondary type of brain tumor the tumor expansion into the brain results from other parts of the body. Imaging tumors with more accuracy plays pivotal role in the diagnosis of tumors. It involves high resolution techniques like MRI, CT, PET etc. MRI is a important mean for studying the body’s visceral structures. MRI is widely used because it gives better quality images of the brain and cancerous tissues compared with the other medical imaging techniques such as X-Ray or Computed Tomography (CT). As being a non-invasive technique MRI are majorly used. The basic principle behind MRI is to generate images from MRI scan using strong magnetic field and radio waves of the body which helps in investigating the anatomy of the body. The entire paper is organized as, Existing methodologies, comparison of K-means and Fuzzy clustering.
+
+Weird increase of the tissues is called tumor. Brain Tumor is a weird mass of tissue in which cells multiply and grow in an unmanageable way, seemingly unrestrained by the processes that manage normal cells. Brain Tumors is define as primary or metastatic and either malignant or benign. A cancer is define metastatic brain Tumor that spreads till the brain from somewhere else in the body. When treating Tumors in brain, ankle or foot then Magnetic Resonance Imaging (MRI) imaging is often used. The processing of digital images using computer algorithm is nothing but digital image processing (DIP). For various categories of DIP, there are numerous benefits in excess of analog image processing which gives a large amount of input information algorithm which can keep away from troubles such as the rapid increase of noise during processing and distortion of signal. Meaning of segmentation is to divide a digital image into several regions or boundaries. It is also differentiating different objects which
+generate smoothing in images and are simple to estimate. This method includes the techniques like thresholding, Region dependent, fuzzy-based, Edge-detection etc. The proposed work is used for classifying the images of tumors of brain MR images into two classes Benign and Malignant. The algorithms used for segmentation are of two types one is using Fuzzy c-mean and the other is using DWT and CNN, Model VGG 16 pretrained model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Literature Survey
+
+Ivana Despotovi (2013), presented a new FCM-based method for spatially coherent and noise-robust image segmentation. The contribution was 
+1) The spatial information of local image features is integrated into both the similarity measure and the membership function to compensate for the effect of noise and 
+2) An anisotropic neighborhood, based on phase congruency features, is introduced to allow more accurate segmentation without image smoothing. The segmentation results, for both synthetic and real images, demonstrate that our method efficiently preserves the homogeneity of the regions and is more robust to noise than related FCM-based methods.
+ Maoguo Gong (2013), presented an improved fuzzy C-means (FCM) algorithm for image segmentation by introducing a tradeoff weighted fuzzy factor and a kernel metric. The tradeoff weighted fuzzy factor depends on the space distance of all neighboring pixels and their gray-level difference simultaneously. The new algorithm adaptively determined the kernel parameter by using a fast bandwidth selection rule based on the distance variance of all data points in the collection. Furthermore, the tradeoff weighted fuzzy factor and the kernel distance measure are both parameter free. Experimental results on synthetic and real images show that the new algorithm is effective and efficient, and is relatively independent of this type of noise. 
+Bhagwat et al (2013) they showed that DICOM images produce better results as compared to non medical images. They found that time requirement of hierarchical clustering was least of three and that for Fuzzy C means it was highest for detection of brain tumor. K-means algorithm produces more accurate result compared to Fuzzy c-means and hierarchical clustering.
+ A.Sivaramakrishnan and Dr.M.Karnan(2013) proposed a novel and an efficient detection of the brain tumor region from cerebral image was done using Fuzzy C-means clustering and histogram. The histogram equalization was used to calculate the intensity values of the grey level images. The decomposition of images was done using principle component analysis which was used to reduce dimensionality of the wavelet co - efficient. The results of the proposed Fuzzy C-means (FCM) clustering algorithm successfully and accurately extracted the tumor region from brain MRI brain images 
+Jaskirat kaur et al (2012), described clustering algorithms for image segmentation and did a review on different tyapes of image segmentation techniques. They also proposed a methodology to classify and quantify different clustering algorithms based on their consistency in different applications. They described the various performance parameters on which consistency will be measured.
+ Roy et al (2012) calculated the tumor affected area for symmetrical analysis. They showed its application with several data sets with different tumor size, intensity and location. They proved that their algorithm can automatically detect and segment the brain tumor. MR images gives better result compare to other techniques like CT images and X-rays. Image pre-processing includes conversion of RGB image into grayscale image and then passing that image to the high pass filter in order to remove noise present in image. 
+B. Sathya et al (2011), proposed four clustering algorithm; k mean, improved k mean, c mean and improved c mean algorithm. They did an experimental analysis for large database consisting of various images. They analyzed the results using various parameters Hui Zhang et al (2008), compared subjective and supervised evaluation methodology for image segmentation. Subjective evaluation and supervised evaluation, are infeasible in many vision applications, so unsupervised methods are necessary. Unsupervised evaluation enables the objective comparison of both different segmentation methods and different parameterizations of a single method.
+Martial Heber et al (2005), presented an evaluation of two popular segmentation algorithms, the mean shift-based segmentation algorithm and a graph-based segmentation scheme.
+
+
+
+
+
+
+
+
+
+Motivation
+
+Brain tumor segmentation is one of the most important and difficult tasks in many medical-image applications because it usually involves a huge amount of data. Artifacts due to patient’s motion, limited acquisition time, and soft tissue boundaries are usually not well defined. There are large class of tumor types which have variety of shapes and sizes. They may appear indifferent sizes and types with different image intensities. Some of them may also affect the surrounding structures that change the image intensities around the tumor.
+Moreover, the World Health Organization (WHO) states that around 400,000 people in the world are affected with the brain tumor and 120,000 people have died in the previous year .Before the treatment of chemotherapy, radiotherapy, or brain surgeries, there is a need for medical practitioners to confirm the boundaries and regions of the brain tumor and determine where exactly it is located and the exact affected area. For reviewing the adverse effects of the cancer, the tool can be automatic or semi-automatic for brain tumor segmentation can helps and also acts as a pre-requisite stage for doctors to identify the brain tumor before performing surgeries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Project Overview and Objectives
+
+The main purpose of this project was to build a CNN model that would classify if subject has a tumor or not base on MRI scan. I used the VGG-16 model architecture and weights to train the model for this binary problem. I used accuracy as a metric to justify the model performance which can be defined as:
+Accuracy=Number of correclty predicted imagesTotal number of tested images×100%
+
+
+* Note: there might be some misunderstanding in terms of set names so I want to describe what do I mean by test and validation set:
+•	validation set - is the set used during the model training to adjust the hyperparameters.
+•	test set - is the small set that I don't touch for the whole training process at all. It's been used for final model performance evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Description of Data Set
+
+LGG Segmentation Dataset
+Dataset used in:
+Mateusz Buda, AshirbaniSaha, Maciej A. Mazurowski "Association of genomic subtypes of lower-grade gliomas with shape features automatically extracted by a deep learning algorithm." Computers in Biology and Medicine, 2019.
+and
+Maciej A. Mazurowski, Kal Clark, Nicholas M. Czarnek, Parisa Shamsesfandabadi, Katherine B. Peters, Ashirbani Saha "Radiogenomics of lower-grade glioma: algorithmically-assessed tumor shape is associated with tumor genomic subtypes and patient outcomes in a multi-institutional study with The Cancer Genome Atlas data." Journal of Neuro-Oncology, 2017.
+
+For This Dataset we will use the technique called Data Augmentation which helps to "increase" the size of training set. The image data that was used for this problem is Brain MRI Images for Brain Tumor Detection. It conists of MRI scans of two classes:
+•	NO - no tumor, encoded as 0
+•	YES - tumor, encoded as 1
+
+
+
+
+
+
+
+
+
+
+
+
+Methodology
+ 
+Flowchart for Image Processing Of Brain Tumor
+
+
+Pre-processing and Enhancement of an Image
+
+This is the first step of image processing it is used to enhance the chances of detecting the suspicious region. Finer details of the image are enhanced and noise is removed from the image. Clinical MRI when corrupted by noise reduces the accuracy of the image.
+Various filters are used to remove this noise. Anisotropic filter is used to remove background noise, weighted median filter is used to remove salt and pepper noise. Wavelet based de-noising method makes wavelet and scaling coefficient biased.
+
+Discrete Wavelet Transform:  DWT is widely used in image compressing and signal to process. It is known as multiresolution analysis and it also decomposes images into Scaling functions as well as wavelet coefficients and this will help for image compressing. Image is a two-dimensional matrix consist of pixels, each pixel represents the digital equivalent of image intensity. DWT transforms converts the spatial domain pixels into frequency domain that are represented in multiple sub-bands. Image is in the spatial domain in that adjacent pixel values are highly correlated to each other and they are redundant. So, these redundancies need to be eliminated to compress images.
+
+Feature Extraction: It is used in image processing involves reducing the number of resources required to describe a large set of data. It builds derived features intended to be non-redundant and informative. Basically, it is the transformation of the original image to a data set with a decreased number of variable that contains discriminated information. Classifier: Classification is a type of pattern recognition which is used in machine learning. Classification is of two types Supervised (learning where a training set of correctly identified observations is available) and Unsupervised learning procedure is known as clustering (involves grouping data into categories based on some measure of inherent similarity or distance). 
+Clustering: It is a type of Unsupervised learning. It groups a set of objects in a way that objects in the same group are more similar to each other than to those in other groups and these groups known as clusters.
+
+
+
+Technology
+
+Python with Deep Learning and Pretrained Model VGG 16
+
+We are going to use the technique CNN for the image classification 
+After getting the good result we can compare the model with the other Machine Learning algorithm.
+
+
+CNN Working 
+
+ 
+
+
+
+Algorithm for CNN based Classification 
+
+1. Apply convolution filter in first layer 
+2. The sensitivity of filter is reduced by smoothing the convolution filter (i.e) subsampling.
+ 3. The signal transfers from one layer to another layer is controlled by activation layer.
+4. Fasten the training period by using rectified linear unit (RELU) 
+5. The neurons in proceeding layer is connected to every neuron in subsequent layer.
+6. During training Loss layer is added at the end to give a feedback to neural network
+
+
+Pre-processing
+The main challenging task is removing artifacts produced by inhomogeneity in a magnetic field or small movements created by the patient during scanning. Many time bias is present in the scanning results, which affect the segmentation results, particularly in the computer n based models. Chmelika et al., (2018) demonstrated work uses n41TK bias correction for the T1 and T1C images in the data set. The n4T1K bias correction removes the intensity gradient on each scanning images. Additionally, noise reduction is also performed by median filter in order to standardize the pixel intensities. Hence, noise reduction and bias correction helps to improve the data processing and provides the better segmentation, multiple radio frequency pulse sequences can be used to provide the different types of tissue. In BRATS data base there are four different sequences available for each image like fluid attenuated recovery (FLAIR), T1, T1 contrasted and T2. The chemical and physiological characteristics can be obtained from these pulse sequences, which result in contrast between the individual classes. The architecture for the proposed work
+
+
+
+
+ 
+
+
+
+
+
+Neural network
+For image recognition, neural network is one of the powerful tools to perform segmentation. MRI is one of the most commonly used imaging techniques to capture MRI brain images. Automatic segmentation is a challenging task because of its large spatial and structural variability. Hence, the proposed system implements the automatic segmentation method based on CNN exploring small 3×3 kernals. The small size kernals help to design deeper architecture by using fewer number of weights in the network.
+CNN algorithm
+Raphael Prevost et al., (2018) discussed CNN algorithm performs the voxel-wise classification problem. The tumour or lesion portion is separated from the background by calculating the probability of each image voxel belonging to the target is known. The CNN network has four sections input and convolution sections. The input layer processes the input image in order to produce the designed image patches. The convolution section process the designed image patches, in which multilayer convolutional filters operates and output feature maps. Further, the fully connected layer that groups all feature maps. The classification section estimates a prediction score to classify the every image voxel and provides a segmentation map.
+
+Input section
+The input section generates the image patches for the remaining of the network. Chena et al., (2017) implemented the method performs the classification based on voxel-wise, where each voxel is classified based on the linear and nonlinear relationship between the focal voxel’s intensity and its neighbours. The input 3D image size is large; hence, calculation of linear and nonlinear relationship between all voxels in the complete image is complex. Hence, the entire image is divided into smaller patches in order to find the relationship within a particular region instead of the entire image. It reduces the computational time and also memory space. It separates both local and global patches as input for the convolution section. For every extraction process, the central voxel is chosen randomly and extracted concentric local and global image patches. The neighbouring voxel around the central voxel provides the local information and global patch covers larger region and provides global information. In order to reduce the computation burden produced by the larger global patch we used down sampling of all global patches. The down sampling process is also called as pooling.
+Convolution section
+There are multiple layers in the convolution section, which help to sequentially identify the features using convolution operations. The captured features are low level features like edges and corner relationship between neighbouring voxels. The feature maps are the output of the convolutional layer. The complete convolution region consists of three different sub paths. The path 1 and 2 utilize the same local patch with various filter sizes to internment various neighbourhood patterns, at the same time sub path 3 uses down sampled global patch to provide global features. The convolutional layer calculates the output of the neurons that are connected to either local or global regions in the input. The convolution is the process of performing dot product between their inputs and their receptive field to which they are connected to in the input volume. For our research work
+
